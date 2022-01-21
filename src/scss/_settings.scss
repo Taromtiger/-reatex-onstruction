@@ -147,11 +147,11 @@ span {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-light);
-  
+
   &--fill {
     background-color: var(--color-primary);
   }
-  
+
   &--stroke {
     &-light {
       border-color: var(--color-light);
