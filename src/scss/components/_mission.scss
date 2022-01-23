@@ -69,10 +69,14 @@
   border-radius: 4px;
   padding: 48px 60px;
   box-shadow:
-    0 80px 80px -20px rgba(154, 156, 165, 8%),
-    0 30px 24px -10px rgba(154, 156, 165, 5%),
-    0 12px 10px -6px rgba(154, 156, 165, 4%),
-    0 4px 4px -4px rgba(30, 33, 44, 3%);
+    0 80px 80px -20px
+    rgba(154 156 165 / 8%),
+    0 30px 24px -10px
+    rgba(154 156 165 / 5%),
+    0 12px 10px -6px
+    rgba(154 156 165 / 4%),
+    0 4px 4px -4px
+    rgba(30 33 44 / 3%);
   background: var(--color-light);
 
   &__title {
