@@ -7,27 +7,14 @@
   background-repeat: no-repeat;
 
   &__list {
-    margin-bottom: 77px;
-  }
-
-  &__learn {
-    @include flex-all-center;
-  }
-
-  &__subtitle {
-    margin: 0;
-    margin-right: 40px;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.5;
-    color: var(--color-ebony);
+    margin-bottom: 79px;
   }
 }
 
 .services-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: var(--grid-gap);
 }
 
 .services-item {
@@ -88,7 +75,7 @@
   }
 
   &__icon {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     width: 52px;
     height: 52px;
     fill: var(--color-primary);
