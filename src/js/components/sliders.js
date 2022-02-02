@@ -61,7 +61,7 @@ document.querySelector('.portfolio-section__').addEventListener('click', () => {
 const testimoniasSlider = new Swiper('.testimonias__items', {
   slidesPerView: 1,
   spaceBetween: gap,
-  loop: true;
+  loop: true,
   navigation: {
     nextEl: '.testimonials__next',
     prevEl: '.testimonials__prev',
