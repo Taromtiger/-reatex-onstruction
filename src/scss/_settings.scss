@@ -31,6 +31,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .site-container {
@@ -45,7 +46,6 @@ a {
   border: none;
   padding: 0;
   background: transparent;
-  cursor: pointer;
 }
 
 .list-reset {
@@ -91,6 +91,7 @@ a {
 }
 
 .centered {
+  width: 100%;
   text-align: center;
 }
 
@@ -119,10 +120,6 @@ a {
   }
 }
 
-span {
-  color: var(--color-primary);
-}
-
 .main-descr {
   margin: 0;
   font-size: 20px;
@@ -147,6 +144,7 @@ span {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-light);
+  cursor: pointer;
 
   &--fill {
     background-color: var(--color-primary);
@@ -186,11 +184,6 @@ span {
 
 .section-offset {
   padding-top: 120px;
-}
-
-.centered {
-  width: 100%;
-  text-align: center;
 }
 
 .custom-checkbox {

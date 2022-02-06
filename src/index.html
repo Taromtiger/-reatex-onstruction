@@ -6,21 +6,25 @@
 <body class="page__body">
   <div class="site-container">
     @include('partials/header.html')
-    @include('partials/hero.html')
-    @include('partials/about-section.html')
-    @include('partials/mission.html')
-    @include('partials/services-section.html')
-    @include('partials/portfolio-section.html')
-    @include('partials/partners.html')
-    @include('partials/testimonials.html')
-    @include('partials/facts.html')
-    @include('partials/recent-news.html')
-    @include('partials/contacts-section.html')
+
+    <div class="main">
+      @include('partials/hero.html')
+      @include('partials/about-section.html')
+      @include('partials/mission.html')
+      @include('partials/services-section.html')
+      @include('partials/portfolio-section.html')
+      @include('partials/partners.html')
+      @include('partials/testimonials.html')
+      @include('partials/facts.html')
+      @include('partials/recent-news.html')
+      @include('partials/contacts-section.html')
+    </div>
 
     <picture>
       <source srcset="img/cover.avif" type="image/avif">
       <source srcset="img/cover.webp" type="image/webp">
     </picture>
+
     @include('partials/footer.html')
   </div>
 </body>
