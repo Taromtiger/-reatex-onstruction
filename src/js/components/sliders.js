@@ -57,3 +57,13 @@ document.querySelector('.portfolio-section__').addEventListener('click', () => {
   nextActiveSlide.classList.add('slider-visible');
   nextNextActiveSlide.classList.add('slider-visible');
 });
+
+const testimoniasSlider = new Swiper('.testimonias__items', {
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
+});
