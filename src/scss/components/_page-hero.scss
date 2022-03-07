@@ -63,4 +63,9 @@
   &--about {
     background-image: url("../img/about-bg.png");
   }
+
+  &--positions {
+    background-image: url("../img/available-positions-bg.png");
+    background-position: right 1px bottom;
+  }
 }
