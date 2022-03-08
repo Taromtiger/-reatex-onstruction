@@ -1,0 +1,9 @@
+.categories {
+  padding-top: 121px;
+}
+
+.categories-list {
+  &__item {
+    grid-column: 6 span;
+  }
+}
