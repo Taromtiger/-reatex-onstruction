@@ -1,0 +1,156 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 121px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+}
+
+.form-contacts {
+  width: 600px;
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    width: 100%;
+  }
+
+  &__field {
+    margin-bottom: 0;
+    width: 47.5%;
+
+    &--big {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 41px;
+  }
+
+  &__checkbox {
+    max-width: 315px;
+
+    .custom-checkbox__text {
+      font-size: 16px;
+      line-height: 1.6;
+
+      &::before {
+        left: 0;
+        top: 4px;
+      }
+
+      &::after {
+        left: 0;
+        top: 4px;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 15px 41px;
+  }
+
+  .form-field__caption {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-gray);
+  }
+
+  &__fields {
+    border: none;
+    padding: 0;
+    padding-left: 3px;
+    width: 47.5%;
+
+    .form-field__captiom {
+      margin-bottom: 26px;
+      padding-top: 3px;
+    }
+  }
+
+  &__radio:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  .form-field__input {
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #9a9ca5;
+  }
+
+  .choices {
+    width: 100%;
+  }
+
+  .choices__inner {
+    margin: 0;
+    border: 1px solid #d7dadd;
+    border-radius: 4px;
+    padding: 0;
+    height: 52px;
+    background-color: var(--color-athens);
+  }
+
+  .choices__list--single .choices__placeholder {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #9a9ca5;
+    opacity: 1;
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+
+  .choices__list--single {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 100%;
+  }
+
+  .choices[data-type*="select-one"]::after {
+    right: 19px;
+    margin-top: 0;
+    border: none;
+    width: 13px;
+    height: 7px;
+    background-image: url("../img/angel-down.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .choices[data-type*="select-one"].is-open::after {
+    margin-top: -7px;
+    transform: rotate(180deg) translateY(-50%);
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
+
+  .choices__list--dropdown {
+    background-color: var(--color-athens);
+  }
+}
+
+.form-contacts .form-field__input--big {
+  height: 124px;
+}

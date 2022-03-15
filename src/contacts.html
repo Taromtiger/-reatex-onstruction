@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+
+    <main>
+      @include('partials/header-1.html')
+      @include('partials/hero-contacts.html')
+      @include('partials/contacts-form.html')
+      @include('partials/contacts-info.html')
+    </main>
+
+    <picture>
+      <source srcset="img/cover.avif" type="image/avif">
+      <source srcset="img/cover.webp" type="image/webp">
+    </picture>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
