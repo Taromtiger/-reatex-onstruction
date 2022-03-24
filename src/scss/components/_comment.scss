@@ -30,10 +30,24 @@
     font-size: 16px;
     line-height: 1.6;
     color: var(--coolor-gray);
+    transition: color 0.3s ease-in-out;
 
     a {
       font-weight: 700;
       color: var(--color-primary);
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &:active {
+        color: var(--color-active);
+      }
     }
 
     * {
@@ -51,6 +65,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--color-storm);
+    transition: color 0.3s ease-in-out;
 
     svg {
       display: block;
@@ -59,6 +74,19 @@
       height: 16px;
       fill: currentColor;
       object-fit: cover;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
   }
 }

@@ -72,5 +72,14 @@
   &__link {
     padding: 11px 27px;
     letter-spacing: normal;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-light);
+    }
+
+    &:active {
+      color: var(--color-light);
+    }
   }
 }

@@ -89,9 +89,18 @@
     letter-spacing: 0.5px;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      color: var(--color-primary);
+    }
+
     &:hover {
       color: var(--color-light);
       background-color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
   }
 }
@@ -121,6 +130,21 @@
       margin-right: 25px;
       padding-right: 44px;
       padding-left: 44px;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        color: var(--color-primary);
+      }
+
+      &:hover {
+        color: var(--color-light);
+        background-color: var(--color-primary);
+      }
+
+      &:active {
+        color: var(--color-active);
+      }
     }
 
     &--send {

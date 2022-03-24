@@ -31,6 +31,20 @@
     font-size: 20px;
     line-height: 1.5;
     color: var(--color-ebony);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid (var(--color-primary));
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
   }
 
   &--small {
@@ -56,6 +70,7 @@
   &__item {
     position: relative;
     color: inherit;
+    transition: color 0.3s ease-in-out;
 
     &:not(:last-child) {
       margin-right: 21px;
@@ -79,5 +94,20 @@
       background-size: 16px 16px;
       background-repeat: no-repeat;
     }
+  }
+}
+
+a.article-meta__item {
+  &:focus {
+    outline: 2px solid (var(--color-primary));
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:active {
+    color: var(--color-active);
   }
 }

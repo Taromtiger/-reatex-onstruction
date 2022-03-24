@@ -119,5 +119,21 @@
     font-size: 12px;
     line-height: 36px;
     letter-spacing: 0.5px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-active);
+    }
   }
 }

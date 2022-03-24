@@ -13,6 +13,14 @@
     bottom: 0;
     z-index: 3;
     background-color: rgba(#1e212c, 0.6);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  &--played {
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &__content {
@@ -34,30 +42,30 @@
     height: 80px;
     background-color: var(--color-primary);
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
     svg {
       width: 26px;
       height: 26px;
       fill: var(--color-light);
     }
-  }
 
-  &__muted {
-    @include flex-all-center;
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
 
-    position: absolute;
-    left: 32px;
-    bottom: 32px;
-    z-index: 10;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(#fff, 0.12);
+    &:hover {
+      background-color: var(--color-active);
+    }
 
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--color-light);
+    &:active {
+      background-color: var(--color-active);
+    }
+
+    &--played {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
