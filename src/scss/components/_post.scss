@@ -76,6 +76,11 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include mobile {
+        padding: 0;
+        padding-top: 50px;
+      }
     }
 
     ul {
@@ -109,6 +114,11 @@
           margin-bottom: 5px;
         }
       }
+    }
+
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
 

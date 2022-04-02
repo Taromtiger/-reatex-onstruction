@@ -19,6 +19,18 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 100px;
     gap: calc(var(--services-benefits-gap) * 2);
+
+    @include tablet {
+      --services-benefits-gap: 30px;
+    }
+
+    @include minitablet {
+      --services-benefits-gap: 15px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -41,6 +53,10 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include minitablet {
+          display: none;
+        }
       }
     }
 
@@ -54,6 +70,12 @@
 
     &--control {
       background-image: url("../img/control.svg");
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -80,5 +102,9 @@
 
   &__btn {
     width: 390px;
+
+    @include mobile {
+      width: 290px;
+    }
   }
 }

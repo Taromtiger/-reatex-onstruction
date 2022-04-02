@@ -7,20 +7,46 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 48px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__slider-nav {
     transform: translateX(12px);
+
+    @include mobile {
+      transform: none;
+    }
   }
 
   &__title {
     margin: 0;
     padding-bottom: 14px;
     max-width: 705px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 1.5;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+      padding-bottom: 0;
+      max-width: none;
+      font-size: 28px;
+      line-height: 1.5;
+    }
   }
 
   &__learn {
     margin-top: 80px;
+
+    @include mobile {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__items {
@@ -37,5 +63,9 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

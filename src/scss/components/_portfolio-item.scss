@@ -22,6 +22,14 @@
     font-size: 20px;
     line-height: 1.5;
     color: var(--color-ebony);
+
+    @include minidesk {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      min-height: 54px;
+    }
   }
 
   &__descr {
@@ -44,6 +52,10 @@
     color: var(--color-primary);
     transition: 0.3s ease-in-out;
     will-change: margin;
+
+    @include minitablet {
+      margin-bottom: 0;
+    }
   }
 
   &:focus {

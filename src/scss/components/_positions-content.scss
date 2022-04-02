@@ -11,6 +11,11 @@
     justify-content: flex-end;
     grid-column: 5 span;
   }
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .positions-list {
@@ -24,7 +29,6 @@
     &:hover {
       box-shadow: var(--main-shadow);
     }
-
   }
 }
 
@@ -36,6 +40,12 @@
   border-radius: 4px;
   padding: 32px 40px;
   background-color: var(--color-light);
+
+  &__left {
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
 
   &__meta {
     margin-bottom: 7px;
@@ -103,6 +113,11 @@
       color: var(--color-active);
     }
   }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .positions-looking {
@@ -123,6 +138,18 @@
     font-size: 18px;
     line-height: 1.5;
     color: var(--color-gray);
+  }
+
+  &__btns {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+      .positions-looking__btn--subs {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__btn {

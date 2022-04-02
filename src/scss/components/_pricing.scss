@@ -23,6 +23,10 @@
   border-radius: 4px;
   box-shadow: var(--main-shadow);
   background-color: var(--color-light);
+
+  @include minitablet {
+    overflow-x: auto;
+  }
 }
 
 .table {
@@ -135,5 +139,13 @@
       color: var(--color-light);
       background-color: var(--color-active);
     }
+
+    @include tablet {
+      padding: 0 10px;
+    }
+  }
+
+  @include minitablet {
+    width: 1200px;
   }
 }

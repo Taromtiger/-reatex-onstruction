@@ -7,18 +7,18 @@ const gap = parseInt(bodyStyle.getPropertyValue('--grid-gap'));
 if (portSlider) {
 
   const portfolioSlider = new Swiper(portSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
         console.log('swiper initialized');
-  
+
         const activeSlide = portSlider.querySelector('.swiper-slide-active');
-        
+
         const nextActiveSlide = activeSlide.nextElementSibling;
-        
+
         const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
-  
+
         activeSlide.classList.add('slider-visible');
         nextActiveSlide.classList.add('slider-visible');
         nextNextActiveSlide.classList.add('slider-visible');
@@ -28,15 +28,25 @@ if (portSlider) {
       nextEl: '.portfolio-section__next',
       prevEl: '.portfolio-section__prev',
     },
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+
+        768: {
+        slidesPerView: 3,
+      }
+    }
   });
-  
+
   document.querySelector('.portfolio-section__prev').addEventListener('click', () => {
     const activeSlide = portSlider.querySelector('.swiper-slide-next');
-  
+
     document.querySelectorAll('.portfolio-section__items .swiper-slide').forEach(el => {
       el.classList.remove('slider-visible');
     });
-        
+
     if (activeSlide.previousElementSibling) {
       const nextActiveSlide = activeSlide.previousElementSibling;
       activeSlide.classList.add('slider-visible');
@@ -44,18 +54,18 @@ if (portSlider) {
       activeSlide.nextElementSibling.classList.add('slider-visible');
     }
   });
-  
+
   document.querySelector('.portfolio-section__next').addEventListener('click', () => {
     const activeSlide = portSlider.querySelector('.swiper-slide-active');
-        
+
     const nextActiveSlide = activeSlide.nextElementSibling;
-    
+
     const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
-  
+
     document.querySelectorAll('.portfolio-section__items .swiper-slide').forEach(el => {
       el.classList.remove('slider-visible');
     });
-  
+
     activeSlide.classList.add('slider-visible');
     nextActiveSlide.classList.add('slider-visible');
     nextNextActiveSlide.classList.add('slider-visible');
@@ -65,18 +75,18 @@ if (portSlider) {
 if (relatedSlider) {
 
   const relatedProjSlider = new Swiper(relatedSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
         console.log('swiper initialized');
-  
+
         const activeSlide = relatedSlider.querySelector('.swiper-slide-active');
-        
+
         const nextActiveSlide = activeSlide.nextElementSibling;
-        
+
         const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
-  
+
         activeSlide.classList.add('slider-visible');
         nextActiveSlide.classList.add('slider-visible');
         nextNextActiveSlide.classList.add('slider-visible');
@@ -86,15 +96,25 @@ if (relatedSlider) {
       nextEl: '.related-projects__next',
       prevEl: '.related-projects__prev',
     },
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+
+        768: {
+        slidesPerView: 3,
+      }
+    }
   });
-  
+
   document.querySelector('.related-projects__prev').addEventListener('click', () => {
     const activeSlide = relatedSlider.querySelector('.swiper-slide-next');
-  
+
     document.querySelectorAll('.related-projects__items .swiper-slide').forEach(el => {
       el.classList.remove('slider-visible');
     });
-        
+
     if (activeSlide.previousElementSibling) {
       const nextActiveSlide = activeSlide.previousElementSibling;
       activeSlide.classList.add('slider-visible');
@@ -102,18 +122,18 @@ if (relatedSlider) {
       activeSlide.nextElementSibling.classList.add('slider-visible');
     }
   });
-  
+
   document.querySelector('.related-projects__next').addEventListener('click', () => {
     const activeSlide = relatedSlider.querySelector('.swiper-slide-active');
-        
+
     const nextActiveSlide = activeSlide.nextElementSibling;
-    
+
     const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
-  
+
     document.querySelectorAll('.related-projects__items .swiper-slide').forEach(el => {
       el.classList.remove('slider-visible');
     });
-  
+
     activeSlide.classList.add('slider-visible');
     nextActiveSlide.classList.add('slider-visible');
     nextNextActiveSlide.classList.add('slider-visible');
@@ -136,11 +156,20 @@ if (workImages) {
 
   const workSlider = new Swiper('.work-images-nav', {
     spaceBetween: 20,
-    slidesPerView: 10,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6,
+      },
+
+        768: {
+        slidesPerView: 10,
+      }
+    }
   });
-  
+
   const workSlidesNav = new Swiper(workImages, {
     spaceBetween: 20,
     slidesPerView: 1,
@@ -178,7 +207,7 @@ if (historySlider) {
   });
 
   const historyBtns = document.querySelectorAll('.history-nav__btn');
-  
+
   historyBtns.forEach((el, idx) => {
     el.setAttribute('data-index', idx);
 

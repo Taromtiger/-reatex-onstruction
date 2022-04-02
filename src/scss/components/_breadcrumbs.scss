@@ -23,6 +23,10 @@
     color: var(--color-gray);
     transition: color 0.3s ease-in-out;
 
+    &:not([href]) {
+      color: #9a9ca5;
+    }
+
     &:focus {
       outline: 2px solid (var(--color-primary));
       outline-offset: 2px;
@@ -35,9 +39,9 @@
     &:active {
       color: var(--color-active);
     }
+  }
 
-    &:not([href]) {
-      color: #9a9ca5;
-    }
+  @include minitablet {
+    flex-wrap: wrap;
   }
 }

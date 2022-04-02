@@ -10,6 +10,10 @@
     position: relative;
     margin-bottom: 15px;
     font-size: 0;
+
+    @include tablet {
+      text-align: center;
+    }
   }
 
   &__item {
@@ -20,6 +24,10 @@
         opacity: 1;
         visibility: visible;
       }
+    }
+
+    @include tablet {
+      grid-column: 6 span;
     }
   }
 
@@ -96,5 +104,9 @@
         color: var(--color-active);
       }
     }
+  }
+
+  @include tablet {
+    padding-bottom: 60px;
   }
 }

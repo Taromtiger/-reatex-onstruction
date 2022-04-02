@@ -19,6 +19,15 @@
       margin-top: 24px;
       margin-bottom: 47px;
       width: 100%;
+
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+      width: 100%;
     }
   }
 
@@ -38,5 +47,9 @@
         height: 100px;
       }
     }
+  }
+
+  @include minitablet {
+    padding-bottom: 80px;
   }
 }
