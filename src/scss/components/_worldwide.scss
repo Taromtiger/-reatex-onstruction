@@ -1,0 +1,12 @@
+.worldwide {
+  padding: 81px 0 117px;
+  background-color: var(--color-athens);
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  @include minidesk {
+    display: none;
+  }
+}

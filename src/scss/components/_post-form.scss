@@ -1,0 +1,55 @@
+.post-form {
+  padding-top: 38px;
+  padding-bottom: 180px;
+
+  &__title {
+    margin-bottom: 49px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__field {
+    width: 48%;
+
+    &--big {
+      margin-top: 24px;
+      margin-bottom: 47px;
+      width: 100%;
+
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  .form-field {
+    &__caption {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-gray);
+    }
+
+    &__input {
+      height: 52px;
+      font-size: 16px;
+      line-height: 1.6;
+
+      &--big {
+        height: 100px;
+      }
+    }
+  }
+
+  @include minitablet {
+    padding-bottom: 80px;
+  }
+}

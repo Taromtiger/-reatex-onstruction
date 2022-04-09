@@ -13,7 +13,19 @@
   --color-primary: #ff5a30;
   --color-iron: #d7dadd;
   --color-athens: #f4f5f7;
+  --color-active: #fc3300;
 
   // sizes
   --grid-gap: 30px;
+
+  // speed
+  --hero-slider-speed: 500;
+
+  // style
+
+  --main-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 8%),
+    0 30px 24px -10px rgba(154, 156, 165, 5%),
+    0 12px 10px -6px rgba(154, 156, 165, 4%),
+    0 4px 4px -4px rgba(30, 33, 44, 3%);
 }

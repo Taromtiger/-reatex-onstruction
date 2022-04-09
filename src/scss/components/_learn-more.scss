@@ -8,5 +8,20 @@
     font-size: 28px;
     line-height: 1.5;
     color: var(--color-ebony);
+
+    @include minitablet {
+      margin-right: 10px;
+      max-width: 50%;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 10px;
+      max-width: none;
+    }
+  }
+
+  @include mobile {
+    display: block;
   }
 }

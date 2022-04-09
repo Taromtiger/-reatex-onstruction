@@ -3,24 +3,32 @@
   color: rgba(255, 255, 255, 60%);
   background-color: var(--color-ebony);
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--grid-gap);
-  }
-
   &__left {
     grid-column: 7 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__logo {
     margin-right: 60px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__top {
     @include flex-v-center;
 
     margin-bottom: 22px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__descr {
@@ -34,6 +42,14 @@
 
   &__form {
     grid-column: 5 span;
+
+    @include minitablet {
+      grid-column: 12 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__address {
@@ -42,6 +58,10 @@
 
   &__nav {
     grid-column: 8 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__copyright {
@@ -57,6 +77,10 @@
       background-position: 2px center;
       background-size: 16px 16px;
       background-repeat: no-repeat;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
     }
   }
 }
@@ -75,6 +99,14 @@
     @include flex-v-center;
 
     margin-bottom: 15px;
+
+    @include minitablet {
+      margin-right: 50px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
   }
 
   .form-field {
@@ -127,6 +159,23 @@
     }
   }
 
+  a {
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid (var(--color-primary));
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+    }
+
+    &:active {
+      color: var(--color-light);
+    }
+  }
+
   &__name {
     color: var(--color-light);
   }
@@ -140,6 +189,14 @@
   &__col {
     &:not(:last-child) {
       margin-right: 125px;
+
+      @include minitablet {
+        margin-right: 65px;
+      }
+
+      @include mobile {
+        margin-right: 35px;
+      }
     }
   }
 
@@ -152,5 +209,27 @@
   &__link {
     font-size: 16px;
     line-height: 1.6;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid (var(--color-primary));
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+    }
+
+    &:active {
+      color: var(--color-light);
+    }
+  }
+
+  @include minitablet {
+    padding-left: 24px;
+  }
+
+  @include mobile {
+    padding-left: 0;
   }
 }

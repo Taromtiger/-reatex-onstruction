@@ -7,11 +7,12 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 255px);
     margin-bottom: 80px;
-    gap: var(--grid-gap);
+
+    @include tablet {
+      grid-template-rows: initial;
+    }
   }
 
   &__item {
@@ -20,94 +21,33 @@
     &:first-child {
       grid-column: 7 span;
       grid-row: 2 span;
-    }
-  }
-}
 
-.recent-article {
-  overflow: hidden;
-  border-radius: 4px;
-  height: 100%;
-  box-shadow:
-    0 80px 80px -20px rgba(154, 156, 165, 8%),
-    0 30px 24px -10px rgba(154, 156, 165, 5%),
-    0 12px 10px -6px rgba(154, 156, 165, 4%),
-    0 4px 4px -4px rgba(30, 33, 44, 3%);
-  background-color: var(--color-light);
+      @include tablet {
+        grid-column: 12 span;
+        grid-row: 1;
+      }
 
-  &__text {
-    padding: 21px 24px;
-  }
-
-  &__title {
-    margin: 0;
-    margin-bottom: 13px;
-  }
-
-  &__descr {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--golor-gray);
-  }
-
-  &__meta {
-    margin-bottom: 17px;
-  }
-
-  &__link {
-    margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
-    color: var(--color-ebony);
-  }
-
-  &--small {
-    .recent-article__descr {
-      display: none;
-    }
-
-    .recent-article__text {
-      padding: 13px 24px;
-    }
-
-    .recent-article__title {
-      margin-bottom: 9px;
-    }
-  }
-}
-
-.article-meta {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-storm);
-
-  &__item {
-    position: relative;
-    color: inherit;
-
-    &:not(:last-child) {
-      margin-right: 21px;
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: -13px;
-        top: 2px;
-        width: 1px;
-        height: 11px;
-        color: inherit;
-        background-color: currentColor;
+      @include mobile {
+        grid-column: 4 span;
       }
     }
 
-    &--comments {
-      padding-left: 25px;
-      background-image: url("../img/svg/comments.svg");
-      background-position: left center;
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
+    @include tablet {
+      grid-column: 12 span;
     }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &__learn {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
   }
 }

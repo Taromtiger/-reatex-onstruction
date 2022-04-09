@@ -1,0 +1,89 @@
+.employee-benefits {
+  padding-top: 80px;
+  padding-bottom: 151px;
+  background-color: var(--color-light);
+
+  &__list {
+    --grid-column: 3;
+    --mission-gap: 94px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 29px;
+    gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 15px;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 72px;
+    text-align: center;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: calc(-1 * var(--mission-gap));
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-image: url("../img/divider.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--brain {
+      background-image: url("../img/brain.svg");
+    }
+
+    &--growth {
+      background-image: url("../img/growth.svg");
+    }
+
+    &--salary {
+      background-image: url("../img/salary.svg");
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-ebony);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-storm);
+  }
+
+  @include tablet {
+    padding: 60px 0;
+  }
+}

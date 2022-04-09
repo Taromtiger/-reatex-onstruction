@@ -9,12 +9,30 @@
   &__list {
     margin-bottom: 79px;
   }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
 }
 
 .services-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--grid-gap);
+  &__item {
+    grid-column: 3 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .services-item {
@@ -25,15 +43,7 @@
   padding: 0 10px;
   padding-top: 87px;
   padding-bottom: 90px;
-  box-shadow:
-    0 80px 80px -20px
-    rgba(154 156 165 / 8%)
-    0 30px 24px -10px
-    rgba(154 156 165 / 5%)
-    0 12px 10px -6px
-    rgba(154 156 165 / 4%)
-    0 4px 4px -4px
-    rgba(30 33 44 / 3%);
+  box-shadow: var(--main-shadow);
   background: var(--color-light);
 
   &::before {
@@ -67,6 +77,11 @@
     transition: opacity 0.3s ease-in-out;
   }
 
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
   &__content {
     @include flex-column-center;
 
@@ -90,6 +105,10 @@
     line-height: 1.5;
     color: var(--color-ebony);
     transition: color  0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
   &:hover {

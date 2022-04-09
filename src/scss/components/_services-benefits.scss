@@ -1,0 +1,110 @@
+.services-benefits {
+  padding-top: 81px;
+  background-color: var(--color-ebony);
+
+  &__title {
+    color: var(--color-light);
+  }
+
+  .descr {
+    color: var(--color-light);
+    opacity: 0.6;
+  }
+
+  &__list {
+    --grid-column: 3;
+    --services-benefits-gap: 94px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px;
+    gap: calc(var(--services-benefits-gap) * 2);
+
+    @include tablet {
+      --services-benefits-gap: 30px;
+    }
+
+    @include minitablet {
+      --services-benefits-gap: 15px;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 72px;
+    text-align: center;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: calc(-1 * var(--services-benefits-gap));
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-image: url("../img/divider.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include minitablet {
+          display: none;
+        }
+      }
+    }
+
+    &--terms {
+      background-image: url("../img/terms.svg");
+    }
+
+    &--workers {
+      background-image: url("../img/workers.svg");
+    }
+
+    &--control {
+      background-image: url("../img/control.svg");
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-light);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-light);
+    opacity: 0.6;
+  }
+
+  &__centered {
+    margin-bottom: -25px;
+  }
+
+  &__btn {
+    width: 390px;
+
+    @include mobile {
+      width: 290px;
+    }
+  }
+}

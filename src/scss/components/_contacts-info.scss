@@ -1,0 +1,142 @@
+.contacts-info {
+  padding-top: 81px;
+  padding-bottom: 123px;
+  background-color: var(--color-athens);
+
+  &__list {
+    --grid-column: 3;
+    --contacts-gap: 120px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 121px;
+    gap: calc(var(--contacts-gap) * 2);
+
+    @include minidesk {
+      --contacts-gap: 40px;
+    }
+
+    @include minitablet {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-size: 16px;
+    color: var(--color-ebony);
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: calc(-1 * var(--contacts-gap));
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-image: url("../img/divider-2.svg");
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @include minitablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--color-ebony);
+  }
+
+  &__address {
+    margin-bottom: 8px;
+    font-style: normal;
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 25px;
+    border-bottom: 1px solid currentColor;
+    color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+  }
+
+  &__element {
+    line-height: 1.6;
+    color: var(--color-storm);
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__value {
+    line-height: 1.6;
+    color: var(--color-ebony);
+  }
+
+  &__soc {
+    margin-bottom: 42px;
+  }
+
+  &__social {
+    justify-content: center;
+
+    .social__item:not(:last-child) {
+      margin-right: 29px;
+    }
+
+    .social__link {
+      width: 27px;
+      height: 27px;
+
+      svg {
+        fill: var(--color-storm);
+        opacity: 1;
+        transition: fill 0.3s ease-in-out;
+
+        &:hover {
+          fill: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.contacts-info__value {
+  transition: color 0.3s ease-in-out;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:active {
+    color: var(--color-active);
+  }
+}

@@ -2,12 +2,25 @@
   background-color: var(--color-light);
 
   &__list {
+    --grid-column: 3;
     --mission-gap: 94px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 29px;
     gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 15px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -44,6 +57,12 @@
     &--comfort {
       background-image: url("../img/comfort.svg");
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -68,15 +87,7 @@
   top: 92px;
   border-radius: 4px;
   padding: 48px 60px;
-  box-shadow:
-    0 80px 80px -20px
-    rgba(154 156 165 / 8%),
-    0 30px 24px -10px
-    rgba(154 156 165 / 5%),
-    0 12px 10px -6px
-    rgba(154 156 165 / 4%),
-    0 4px 4px -4px
-    rgba(30 33 44 / 3%);
+  box-shadow: var(--main-shadow);
   background: var(--color-light);
 
   &__title {
@@ -92,6 +103,30 @@
   &__content {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+
+      & > * {
+        flex-grow: initial;
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+        width: 49%;
+
+        .form-field__input {
+          width: 100%;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__field {
@@ -100,5 +135,10 @@
 
   &__btn {
     padding: 11px 29px;
+  }
+
+  @include mobile {
+    top: initial;
+    padding: 25px 15px;
   }
 }

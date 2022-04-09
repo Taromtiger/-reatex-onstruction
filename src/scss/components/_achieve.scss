@@ -1,0 +1,199 @@
+.achieve {
+  padding-top: 123px;
+  padding-bottom: 114px;
+  background-image: url("../img/achieve-bg.png");
+  background-position: right -9px bottom -528px;
+  background-repeat: no-repeat;
+  background-color: var(--color-lighh);
+
+  &__list {
+    margin-bottom: 260px;
+
+    @include tablet {
+      margin-bottom: 130px;
+    }
+  }
+
+  &__item {
+    @include flex-column-center;
+
+    grid-column: 3 span;
+    padding-top: 67px;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+
+    &--reccom {
+      background-image: url("../img/like.svg");
+    }
+
+    &--renov {
+      background-image: url("../img/painting.svg");
+    }
+
+    &--spec {
+      background-image: url("../img/helmet.svg");
+    }
+
+    &--finish {
+      background-image: url("../img/pantone.svg");
+    }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+  }
+
+  &__value {
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.3;
+    color: var(--color-primary);
+
+    @include minidesk {
+      font-size: 36px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-ebony);
+  }
+
+  &__info {
+    position: relative;
+    left: -30px;
+    top: -136px;
+    z-index: 10;
+    flex-shrink: 0;
+    border-radius: 4px;
+    padding: 80px;
+    padding-bottom: 58px;
+    width: 735px;
+    box-shadow: var(--main-shadow);
+    background-color: var(--color-light);
+
+    @include minidesk {
+      left: 0;
+      top: 0;
+      width: 55%;
+    }
+
+    @include minidesk {
+      padding: 50px;
+    }
+
+    @include tablet {
+      padding: 20px;
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__image {
+    @include minidesk {
+      max-width: 45%;
+    }
+
+    @include tablet {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  @include minidesk {
+    padding: 40px 0;
+  }
+}
+
+.quote {
+  margin: 0;
+
+  &__content {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 16px 40px 16px 56px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: 16px;
+      width: 28px;
+      height: 20px;
+      background-image: url("../img/braces.svg");
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        left: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--color-ebony);
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 0;
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__footer {
+    padding: 20px 55px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-storm);
+    background-image: url("../img/signature.svg");
+    background-position: top 10px right 25px;
+    background-size: 100px 68px;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      padding-bottom: 120px;
+      background-position: bottom 30px center;
+
+    }
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-ebony);
+  }
+}

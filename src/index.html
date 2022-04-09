@@ -3,11 +3,11 @@
 
 @include('partials/head.html')
 
-<body class="page__body">
+<body class="page__body" id="page">
   <div class="site-container">
     @include('partials/header.html')
 
-    <div class="main">
+    <main class="main">
       @include('partials/hero.html')
       @include('partials/about-section.html')
       @include('partials/mission.html')
@@ -18,7 +18,7 @@
       @include('partials/facts.html')
       @include('partials/recent-news.html')
       @include('partials/contacts-section.html')
-    </div>
+    </main>
 
     <picture>
       <source srcset="img/cover.avif" type="image/avif">

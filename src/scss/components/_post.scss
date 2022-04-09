@@ -1,0 +1,146 @@
+.post {
+  &__cover {
+    display: block;
+    margin-top: -79px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 840px;
+  }
+
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 64px;
+
+    * {
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-gray);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--color-ebony);
+    }
+
+    h3 {
+      margin: 0;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--color-ebony);
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-gray);
+    }
+
+    blockquote {
+      position: relative;
+      margin: 0;
+      margin-bottom: 30px;
+      padding: 20px 0;
+      padding-left: 58px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--color-ebony);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 20px;
+        width: 28px;
+        height: 20px;
+        background-image: url("../img/braces.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      @include mobile {
+        padding: 0;
+        padding-top: 50px;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: -5px;
+      margin-bottom: 27px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-gray);
+
+      li {
+        position: relative;
+        padding-left: 33px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 4px;
+          width: 16px;
+          height: 16px;
+          background-image: url("../img/desicions-check.svg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-ebony);
+
+    span {
+      margin-right: 12px;
+    }
+
+    svg {
+      fill: var(--color-storm);
+      opacity: 1;
+    }
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 13px;
+  }
+}

@@ -6,7 +6,23 @@
 
     &:not(:last-child) {
       margin-right: 34px;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
     }
+  }
+
+  &--nav {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 
@@ -21,12 +37,36 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--color-gray);
+    transition: color 0.3s ease-in-out;
   }
 
   &__value {
     font-size: 18px;
     line-height: 1.5;
     color: var(--color-ebony);
+    transition: color 0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 16px;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    .contacts-link__value {
+      color: var(--color-primary);
+    }
+  }
+
+  &:active {
+    .contacts-link__value {
+      color: var(--color-active);
+    }
   }
 
   &--call {
